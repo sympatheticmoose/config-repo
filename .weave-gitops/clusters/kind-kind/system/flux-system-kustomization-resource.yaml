@@ -10,5 +10,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: wego-github-config-repo
+    name: wego-auto-github-config-repo
 
