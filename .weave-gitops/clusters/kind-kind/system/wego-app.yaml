@@ -13,7 +13,7 @@ spec:
       serviceAccountName: wego-app-service-account
       containers:
         - name: wego-app
-          image: ghcr.io/weaveworks/wego-app:v0.6.0-18-g741964d3
+          image: ghcr.io/weaveworks/wego-app:0.6.1
           args: ["ui", "run", "-l", "--helm-repo-namespace", "wego-system"]
           ports:
             - containerPort: 9001
@@ -48,19 +48,19 @@ rules:
     verbs: ["get","create"]
   - apiGroups: ["wego.weave.works"]
     resources: [ "apps" ]
-    verbs: [ "get","create","list","delete","watch" ]
+    verbs: [ "*" ]
   - apiGroups: ["kustomize.toolkit.fluxcd.io"]
     resources: [ "kustomizations" ]
-    verbs: [ "get","create","delete","list" ]
+    verbs: [ "*" ]
   - apiGroups: ["helm.toolkit.fluxcd.io"]
     resources: [ "helmreleases" ]
-    verbs: [ "get","create","delete","list" ]
+    verbs: [ "*" ]
   - apiGroups: ["source.toolkit.fluxcd.io"]
     resources: [ "helmrepositories" ]
-    verbs: [ "get","create","delete","list" ]
+    verbs: [ "*" ]
   - apiGroups: ["source.toolkit.fluxcd.io"]
     resources: [ "gitrepositories" ]
-    verbs: [ "get","create","delete","list" ]
+    verbs: [ "*" ]
 ---
 apiVersion: v1
 kind: ServiceAccount
