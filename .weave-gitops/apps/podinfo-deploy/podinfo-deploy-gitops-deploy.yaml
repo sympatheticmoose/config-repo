@@ -5,7 +5,7 @@ metadata:
   name: podinfo-deploy
   namespace: wego-system
 spec:
-  inte rval: 1m0s
+  interval: 1m0s
   path: ./
   prune: true
   sourceRef:
