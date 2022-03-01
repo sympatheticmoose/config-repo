@@ -3,5 +3,3 @@ kind: Kustomization
 metadata:
   name: kind-kind
   namespace: wego-system
-resources:
-- ../../../apps/podinfo-deploy
