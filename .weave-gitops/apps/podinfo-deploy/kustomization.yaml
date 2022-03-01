@@ -3,8 +3,7 @@ kind: Kustomization
 metadata:
   name: podinfo-deploy
   namespace: wego-system
-     resources:
-
+resources:
 - app.yaml
 - podinfo-deploy-gitops-deploy.yaml
 - podinfo-deploy-gitops-source.yaml
